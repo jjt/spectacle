@@ -2,7 +2,8 @@ import React from "react/addons";
 
 import {
   Appear, BlockQuote, Cite, CodePane, Deck, Fill,
-  Heading, Image, Layout, Link, ListItem, List, Quote, Slide, Text
+  Heading, Heading1, Heading2, Heading3, Heading4, Heading5, Heading6,
+  Image, Layout, Link, ListItem, List, Quote, Slide, Text
 } from "../src/spectacle";
 
 import preloader from "../src/utils/preloader";
@@ -22,6 +23,7 @@ export default class extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={800}>
         <Slide transition={["zoom"]} bgColor="primary">
+          <Heading3 caps>Heading3</Heading3>
           <Heading size={1} fit caps lineHeight={1} textColor="black">
             Spectacle
           </Heading>
@@ -35,6 +37,14 @@ export default class extends React.Component {
             <Text bold caps textColor="tertiary">View on Github</Text>
           </Link>
           <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+        </Slide>
+        <Slide>
+          <Heading1>Heading 1</Heading1>
+          <Heading2>Heading 2</Heading2>
+          <Heading3>Heading 3</Heading3>
+          <Heading4>Heading 4</Heading4>
+          <Heading5>Heading 5</Heading5>
+          <Heading6>Heading 6</Heading6>
         </Slide>
         <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
           <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
